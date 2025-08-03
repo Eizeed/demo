@@ -1,0 +1,14 @@
+[[language]]
+name = "rust"
+auto-format = false
+
+[language.auto-pairs]
+"{" = "}"
+"<" = ">"
+
+[language-server.rust-analyzer]
+config = { procMacro = { ignored = { leptos_macro = [
+    # "component",
+    "server"
+] } } }
+
