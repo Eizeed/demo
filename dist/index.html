@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Add a plain CSS file: see https://trunkrs.dev/assets/#css -->
+  <!-- If using Tailwind with Leptos CSR, see https://trunkrs.dev/assets/#tailwind instead-->
+  <!-- <link data-trunk rel="scss" href="public/styles.scss" /> -->
+
+  <!-- Include favicon in dist output: see https://trunkrs.dev/assets/#icon -->
+  <!-- <link data-trunk rel="icon" href="public/favicon.ico" /> -->
+
+  <!-- include support for `wasm-bindgen --weak-refs` - see: https://rustwasm.github.io/docs/wasm-bindgen/reference/weak-references.html -->
+  <!-- <link data-trunk rel="rust" data-wasm-opt="z" data-weak-refs /> -->
+<link rel="modulepreload" href="/demo-8baca79068ca414f.js" crossorigin="anonymous" integrity="sha384-7NtuxN8VIsjq9MHqh/3B35R2/tOBKtgHuwPRbOPY6ArFx+gsW3kfrvpPDFlP/tHs"><link rel="preload" href="/demo-8baca79068ca414f_bg.wasm" crossorigin="anonymous" integrity="sha384-7IiHffPbe6B2bdNX1YFkZpHXobe0UF76BtR+RjeOM+A3qMt7GcPC0+Dkezmk2LAD" as="fetch" type="application/wasm"></head>
+
+<body>
+<script type="module">
+import init, * as bindings from '/demo-8baca79068ca414f.js';
+const wasm = await init({ module_or_path: '/demo-8baca79068ca414f_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+
+</html>

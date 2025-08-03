@@ -10,19 +10,8 @@
   <!-- <link data-trunk rel="icon" href="public/favicon.ico" /> -->
 
   <!-- include support for `wasm-bindgen --weak-refs` - see: https://rustwasm.github.io/docs/wasm-bindgen/reference/weak-references.html -->
-  
-<script type="module">
-import init, * as bindings from '/demo-8baca79068ca414f.js';
-const wasm = await init({ module_or_path: '/demo-8baca79068ca414f_bg.wasm' });
-
-
-window.wasmBindings = bindings;
-
-
-dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
-
-</script>
-<link rel="modulepreload" href="/demo-8baca79068ca414f.js" crossorigin="anonymous" integrity="sha384-7NtuxN8VIsjq9MHqh/3B35R2/tOBKtgHuwPRbOPY6ArFx+gsW3kfrvpPDFlP/tHs"><link rel="preload" href="/demo-8baca79068ca414f_bg.wasm" crossorigin="anonymous" integrity="sha384-cTbDB44ouXg0+/axyjBNNRdrTsSxKhXQwK5TbuC9epj0QgBErSLLWeECdO6Eivuk" as="fetch" type="application/wasm"></head>
+  <!-- <link data-trunk rel="rust" data-wasm-opt="z" data-weak-refs /> -->
+</head>
 
 <body></body>
 
